@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Items from "../components/Items";
 
 const Home = PropTypes => (
-	<div>
-		<p>Home</p>
-	</div>
+  <div>
+    <Items />
+  </div>
 );
 
 export default Home;
