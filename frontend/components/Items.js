@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Item from "./Item";
+import Pagination from "../components/Pagination";
 import styled from "styled-components";
 
 const Centered = styled.div`
@@ -34,6 +35,7 @@ class Items extends Component {
     return (
       <Centered>
         <p>Items</p>
+        <Pagination />
         <Query query={ALL_ITEMS_QUERY}>
           {({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
@@ -47,6 +49,7 @@ class Items extends Component {
             );
           }}
         </Query>
+        <Pagination />
       </Centered>
     );
   }
