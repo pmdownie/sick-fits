@@ -22,7 +22,6 @@ class DeleteItem extends Component {
     );
     // 3. Put the items back!
     cache.writeQuery({ query: ALL_ITEMS_QUERY, data });
-    console.log(data);
   };
 
   render() {
